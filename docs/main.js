@@ -271,37 +271,32 @@ window.onload = () => {
               document.body.style.overflow = 'auto';
             });
 
-            const nameValue = document.getElementById('exampleName').value;
-            const surnameValue = document.getElementById('exampleSurname')
-              .value;
-            const phoneNumberValue = document.getElementById(
-              'examplePhoneNumber'
-            ).value;
-            const addressValue = document.getElementById('exampleAddress')
-              .value;
-            const emailAddressValue = document.getElementById('exampleEmail')
-              .value;
-            const textValue = document.getElementById('exampleTextarea').value;
+            const name = document.getElementById('exampleName');
+            const surname = document.getElementById('exampleSurname');
+            const phoneNumber = document.getElementById('examplePhoneNumber');
+            const address = document.getElementById('exampleAddress');
+            const emailAddress = document.getElementById('exampleEmail');
+            const text = document.getElementById('exampleTextarea');
 
             document
               .getElementById('btn-submit-modal-checkout')
               .addEventListener('click', () => {
                 if (
-                  nameValue.length !== 0 &&
-                  surnameValue.length !== 0 &&
-                  phoneNumberValue.length !== 0 &&
-                  addressValue.length !== 0 &&
-                  emailAddressValue.length !== 0
+                  name.value.length !== 0 &&
+                  surname.value.length !== 0 &&
+                  phoneNumber.value.length !== 0 &&
+                  address.value.length !== 0 &&
+                  emailAddress.value.length !== 0
                 ) {
                   alert(`
-                  Name: ${nameValue}
-                  Surname: ${surnameValue}
-                  Phone number: ${phoneNumberValue}
-                  Address: ${addressValue}
-                  Email address: ${emailAddressValue}
-                  Text: ${textValue}`);
+                  Name: ${name.value}
+                  Surname: ${surname.value}
+                  Phone number: ${phoneNumber.value}
+                  Address: ${address.value}
+                  Email address: ${emailAddress.value}
+                  Text: ${text.value}`);
                 } else {
-                  alert('Fill all required information, please!');
+                  alert(`Fill all required information, please!`);
                 }
               });
           });
